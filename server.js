@@ -3,6 +3,12 @@ const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
+const createDOMPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window);
+
 const port = process.env.PORT || 3000;
 var db = require("./db");
 
@@ -67,6 +73,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("sendText", (id, data) => {
+    data = DOMPurify.sanitize(data);
     socket.to(id).emit("receiveText", data);
     db.updateMessage(id, data);
   });
