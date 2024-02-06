@@ -2,8 +2,9 @@
   "name": "livenotes",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server/server.js",
   "scripts": {
+    "start": "node src/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

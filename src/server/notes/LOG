@@ -1,0 +1,6 @@
+2024/02/06-19:29:59.762 65f8 Recovering log #36
+2024/02/06-19:29:59.762 65f8 Level-0 table #38: started
+2024/02/06-19:29:59.770 65f8 Level-0 table #38: 223 bytes OK
+2024/02/06-19:29:59.772 65f8 Delete type=0 #36
+2024/02/06-19:29:59.773 65f8 Delete type=3 #34
+2024/02/06-19:29:59.774 632c Moved #38 to level-1 223 bytes OK: files[ 3 1 0 0 0 0 0 ]
